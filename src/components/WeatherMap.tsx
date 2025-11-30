@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { OPENWEATHER_API_KEY } from "@/config/constants";
 
 // Fix for default marker icons in Leaflet with Vite
 delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -23,8 +24,6 @@ interface WeatherMapProps {
   lat: number;
   lon: number;
 }
-
-const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY || "cab921a972f715d1b0cfc681d545981a";
 
 // Component to handle map center updates
 const MapUpdater = ({ lat, lon }: { lat: number; lon: number }) => {
@@ -51,7 +50,7 @@ export const WeatherMap = ({ lat, lon }: WeatherMapProps) => {
       layerType = "wind_new";
     }
 
-    return `https://tile.openweathermap.org/map/${layerType}/{z}/{x}/{y}.png?appid=${API_KEY}`;
+    return `https://tile.openweathermap.org/map/${layerType}/{z}/{x}/{y}.png?appid=${OPENWEATHER_API_KEY}`;
   };
 
   return (
