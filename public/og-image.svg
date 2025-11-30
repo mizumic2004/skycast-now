@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8" />
+      <stop offset="100%" style="stop-color:#f59e0b" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0f172a"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="200" fill="#38bdf8" opacity="0.1"/>
+  <circle cx="1100" cy="530" r="250" fill="#f59e0b" opacity="0.1"/>
+  
+  <!-- Cloud icon -->
+  <g transform="translate(450, 180)" fill="url(#textGrad)">
+    <path d="M120 60c0-22-18-40-40-40-17 0-32 11-38 27-3-1-6-2-10-2-17 0-30 13-30 30s13 30 30 30h80c17 0 30-13 30-30 0-8-3-15-8-20-2-1-4-2-6-2 4-5 7-11 7-18 0-17-14-30-31-30-3 0-6 0-9 1z" transform="scale(1.5)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="url(#textGrad)">SkyScope</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#94a3b8">Dự báo thời tiết Real-Time</text>
+  
+  <!-- Author -->
+  <text x="600" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#64748b">by Hoàng Hưng</text>
+</svg>
+
