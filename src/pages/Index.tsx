@@ -27,6 +27,7 @@ import { MoonPhase } from "@/components/MoonPhase";
 import { WindCompass } from "@/components/WindCompass";
 import { PollenIndex } from "@/components/PollenIndex";
 import { Footer } from "@/components/Footer";
+import { WeatherWidget } from "@/components/WeatherWidget";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { Cloud, MapPin, LogOut } from "lucide-react";
@@ -275,6 +276,9 @@ const Index = () => {
 
         <Footer />
       </div>
+
+      {/* Floating Weather Widget */}
+      {weather && !loading && <WeatherWidget weather={weather} unit={unit} />}
     </div>
   );
 };
