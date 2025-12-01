@@ -27,6 +27,8 @@ import { MoonPhase } from "@/components/MoonPhase";
 import { WindCompass } from "@/components/WindCompass";
 import { PollenIndex } from "@/components/PollenIndex";
 import { MultiCityDashboard } from "@/components/MultiCityDashboard";
+import { WeatherShare } from "@/components/WeatherShare";
+import { WeatherNotifications } from "@/components/WeatherNotifications";
 import { Footer } from "@/components/Footer";
 import { WeatherWidget } from "@/components/WeatherWidget";
 import { Button } from "@/components/ui/button";
@@ -94,6 +96,7 @@ const Index = () => {
 
           <div className="flex items-center gap-3">
             {weather && <UnitToggle unit={unit} onToggle={toggleUnit} />}
+            <WeatherNotifications />
             <ThemeToggle />
             {user ? (
               <div className="flex items-center gap-2 glass-card px-3 py-1.5 rounded-full border border-border/20">
@@ -170,6 +173,10 @@ const Index = () => {
         {weather && !loading && (
           <div className="space-y-8">
             {weatherAlerts.length > 0 && <WeatherAlerts alerts={weatherAlerts} />}
+
+            <div className="flex justify-center">
+              <WeatherShare weather={weather} unit={unit} />
+            </div>
 
             <WeatherCard
               temperature={weather.temperature}
