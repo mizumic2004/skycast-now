@@ -26,6 +26,7 @@ import { PrecipitationChart } from "@/components/PrecipitationChart";
 import { MoonPhase } from "@/components/MoonPhase";
 import { WindCompass } from "@/components/WindCompass";
 import { PollenIndex } from "@/components/PollenIndex";
+import { MultiCityDashboard } from "@/components/MultiCityDashboard";
 import { Footer } from "@/components/Footer";
 import { WeatherWidget } from "@/components/WeatherWidget";
 import { Button } from "@/components/ui/button";
@@ -251,6 +252,8 @@ const Index = () => {
             )}
 
             <CompareWeather unit={unit} />
+
+            <MultiCityDashboard unit={unit} />
 
             {forecast.length > 0 && (
               <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
